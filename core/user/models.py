@@ -67,7 +67,7 @@ class User(AbstractBaseUser,PermissionsMixin,AbstractModel):
         return f"{self.first_name} {self.last_name}"    
     
     def like(self, post):
-        """Like `post` if it hasn't been done yet"""
+        """Like `post` if it hasn't been done yet"""      
         return self.posts_liked.add(post)
     def remove_like(self, post):
         """Remove a like from a `post`"""
